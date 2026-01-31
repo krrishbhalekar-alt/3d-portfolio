@@ -1,30 +1,72 @@
-# Portfolio website
+# 🚀 3D Portfolio Website – Soham Bhalekar
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A modern, interactive **3D portfolio website** built to showcase my skills, projects, and design sense as a **UI/UX + Web App Developer**.  
+The portfolio focuses on clean visuals, smooth animations, and a professional presentation suitable for **internships and entry-level roles**.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sohambhalekar18-bits-projects/v0-3d-portfolio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/idivsgQ2HDS)
+🌐 **Live Website:**  
+https://3d-portfolio-zeta-wheat.vercel.app/
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## ✨ Features
 
-## Deployment
+- 🎨 Modern dark UI with a premium look
+- 🌐 Interactive 3D hero section using Three.js
+- 🌀 Smooth scroll-based animations
+- 🧊 Subtle glassmorphism effects
+- 📱 Fully responsive (mobile, tablet, desktop)
+- ⚡ Fast performance with Vercel deployment
+- 🧭 Clean and minimal navigation
 
-Your project is live at:
+---
 
-**[https://vercel.com/sohambhalekar18-bits-projects/v0-3d-portfolio](https://vercel.com/sohambhalekar18-bits-projects/v0-3d-portfolio)**
+## 🛠️ Tech Stack
 
-## Build your app
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6+)**
+- **Three.js** – 3D visuals
+- **GSAP** – animations
+- **Vercel** – deployment
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/idivsgQ2HDS](https://v0.app/chat/idivsgQ2HDS)**
+## 📂 Sections Included
 
-## How It Works
+- **Hero Section** – 3D animated background with introduction
+- **About Me** – Short professional overview
+- **Skills** – Technologies and tools I use
+- **Projects** – Selected internship-ready projects
+- **Contact** – GitHub, LinkedIn, and email links
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+---
+
+## 🎯 Purpose of This Project
+
+This portfolio is created to:
+- Apply for **internships**
+- Showcase **modern web & UI/UX skills**
+- Demonstrate understanding of **animations and 3D on the web**
+- Serve as a personal brand website
+
+---
+
+## 📸 Preview
+
+> Visit the live site to experience the full 3D animations and interactions.
+
+🔗 https://3d-portfolio-zeta-wheat.vercel.app/
+
+---
+
+## 📬 Contact
+
+- **GitHub:** https://github.com/sohambhalekar18-bit  
+- **LinkedIn:** https://www.linkedin.com/in/soham-bhalekar-145243331  
+- **Email:** (add your email here)
+
+---
+
+## 📄 License
+
+This project is open-source and intended for personal portfolio use.

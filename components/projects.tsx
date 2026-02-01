@@ -13,15 +13,13 @@ const projects = [
     live: "https://github.com/sohambhalekar18-bit/smart-trip-planner-ai",
     featured: true,
   },
-  {
-    title: "Smart Resume Builder",
-    description:
-      "A modern resume builder with AI-powered suggestions, multiple templates, and real-time preview. Export to PDF with one click.",
-    tech: ["Next.js", "TypeScript", "Prisma", "GPT-4"],
-    github: "#",
-    live: "#",
-    featured: true,
-  },
+{
+  title: "Smart Proposal Generator",
+  description: "An AI-powered proposal generator designed for Fiverr and Upwork sellers. Instantly creates high-converting, customized proposals based on job descriptions to save time and increase reply rates.",
+  tags: ["AI", "SaaS", "Freelancing", "UI/UX", "Web App"],
+  github: "https://github.com/sohambhalekar/smart-proposal-generator",
+  live: "https://smart-proposal-generator.vercel.app/",
+},
   {
     title: "3D Portfolio Website",
     description:

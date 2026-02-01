@@ -9,7 +9,7 @@ const projects = [
     description:
       "An intelligent travel planning application that uses AI to generate personalized itineraries based on user preferences, budget, and travel dates.",
     tech: ["React", "Firebase", "OpenAI API", "Tailwind CSS"],
-    github: "#",
+    github: "https://github.com/sohambhalekar18-bit/smart-trip-planner-ai",
     live: "https://github.com/sohambhalekar18-bit/smart-trip-planner-ai",
     featured: true,
   },

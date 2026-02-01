@@ -10,7 +10,7 @@ const projects = [
       "An intelligent travel planning application that uses AI to generate personalized itineraries based on user preferences, budget, and travel dates.",
     tech: ["React", "Firebase", "OpenAI API", "Tailwind CSS"],
     github: "#",
-    live: "#",
+    live: "https://github.com/sohambhalekar18-bit/smart-trip-planner-ai",
     featured: true,
   },
   {
@@ -27,8 +27,8 @@ const projects = [
     description:
       "This portfolio itself — featuring subtle 3D graphics, smooth animations, and a clean, professional design built with Three.js and GSAP.",
     tech: ["Next.js", "Three.js", "GSAP", "Tailwind CSS"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/sohambhalekar18-bit/3D-Portfolio-Websites-Free-05",
+    live: "https://space-portfolio-tau-seven.vercel.app/",
     featured: true,
   },
 ]

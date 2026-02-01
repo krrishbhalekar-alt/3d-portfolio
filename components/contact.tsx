@@ -8,11 +8,11 @@ const socialLinks = [
     name: "Email",
     href: "mailto:soham.bhalekar@email.com",
     icon: <Mail size={20} />,
-    label: "soham.bhalekar@email.com",
+    label: "sohambhalekar18@email.com",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/sohambhalekar",
+    href: "https://www.linkedin.com/in/soham-bhalekar-145243331",
     icon: <Linkedin size={20} />,
     label: "linkedin.com/in/sohambhalekar",
   },

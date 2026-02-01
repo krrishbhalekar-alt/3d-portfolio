@@ -15,10 +15,12 @@ const projects = [
   },
 {
   title: "Smart Proposal Generator",
-  description: "An AI-powered proposal generator designed for Fiverr and Upwork sellers. Instantly creates high-converting, customized proposals based on job descriptions to save time and increase reply rates.",
+  description: 
+    "An AI-powered proposal generator designed for Fiverr and Upwork sellers. Instantly creates high-converting, customized proposals based on job descriptions to save time and increase reply rates.",
   tags: ["AI", "SaaS", "Freelancing", "UI/UX", "Web App"],
   github: "https://github.com/sohambhalekar/smart-proposal-generator",
   live: "https://smart-proposal-generator.vercel.app/",
+  featured: true,
 },
   {
     title: "3D Portfolio Website",

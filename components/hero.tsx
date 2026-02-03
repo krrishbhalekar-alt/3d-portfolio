@@ -86,9 +86,8 @@ export default function Hero() {
 
           {/* Short paragraph (Option 1) */}
           <p className="reveal opacity-0 text-base md:text-lg text-muted-foreground/80 max-w-xl mb-10 leading-relaxed delay-400 text-pretty">
-            I design and build clean, modern web applications with a strong focus
-            on UI/UX, performance, and real-world usability. Passionate about
-            creating internship-ready and production-quality web experiences.
+            I build clean, modern, internship-ready web applications
+with a strong focus on UI/UX, performance, and usability.
           </p>
 
           {/* Buttons */}

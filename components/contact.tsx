@@ -6,7 +6,7 @@ import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react"
 const socialLinks = [
   {
     name: "Email",
-    href: "mailto:soham.bhalekar@email.com",
+    href: "mailto:sohambhalekar18@email.com",
     icon: <Mail size={20} />,
     label: "sohambhalekar18@email.com",
   },
@@ -52,20 +52,32 @@ export default function Contact() {
         <div className="reveal opacity-0 flex items-center gap-4 mb-8">
           <span className="w-12 h-[1px] bg-primary" />
           <span className="text-sm tracking-[0.2em] text-primary uppercase">
-            Contact
+            Get in Touch
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="reveal opacity-0 text-3xl md:text-5xl font-semibold text-foreground mb-6 delay-100 text-pretty">
-          Let&apos;s work together
+        <h2 className="reveal opacity-0 text-3xl md:text-5xl font-semibold text-foreground mb-6 delay-100">
+          Open for Internships & Projects
         </h2>
 
         {/* Description */}
         <p className="reveal opacity-0 text-lg text-muted-foreground max-w-2xl mb-12 delay-200">
-          I&apos;m currently looking for internship opportunities. If you have a
-          project in mind or just want to chat, feel free to reach out.
+          I’m a UI/UX and Web App Developer actively seeking internship opportunities
+          and real-world projects. If you’re a recruiter, startup, or founder,
+          let’s connect and build impactful digital experiences.
         </p>
+
+        {/* Primary CTA */}
+        <div className="reveal opacity-0 mb-12 delay-250">
+          <a
+            href="mailto:sohambhalekar18@email.com"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-medium glow-mint hover:scale-[0.97] transition-all duration-300"
+          >
+            Email Me
+            <ArrowUpRight size={18} />
+          </a>
+        </div>
 
         {/* Contact Links */}
         <div className="reveal opacity-0 space-y-4 delay-300">

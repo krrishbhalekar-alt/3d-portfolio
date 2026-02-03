@@ -38,7 +38,7 @@ export default function Navbar() {
           href="#hero"
           className="text-lg font-medium tracking-tight text-foreground hover:text-primary transition-colors duration-300"
         >
-          SB<span className="text-primary">.</span>
+          PORTFOLIO<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Navigation */}

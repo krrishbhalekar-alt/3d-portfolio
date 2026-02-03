@@ -4,7 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =========================
-   ROOT (LIGHT MODE)
+   ROOT (THIS IS WHAT YOUR SITE IS USING)
+   → GREEN WAS COMING FROM HERE
+   → NOW IT IS CYAN
 ========================= */
 :root {
   --background: oklch(1 0 0);
@@ -16,8 +18,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  /* 🔥 FINAL CYAN PRIMARY (TEXT + BUTTONS) */
+  --primary: oklch(0.85 0.20 195);
+  --primary-foreground: oklch(0.145 0 0);
 
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -33,57 +36,23 @@
 
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+
+  /* 🔥 CYAN GLOW */
+  --ring: oklch(0.85 0.20 195);
 
   --radius: 0.625rem;
 }
 
 /* =========================
-   DARK MODE (CYAN THEME)
+   DARK MODE (SAME CYAN – SAFE)
 ========================= */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-
-  /* 🔥 CYAN PRIMARY */
-  --primary: oklch(0.85 0.2 195);
-  --primary-foreground: oklch(0.145 0 0);
-
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-
-  --ring: oklch(0.85 0.2 195);
-
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.85 0.2 195);
-  --sidebar-primary-foreground: oklch(0.145 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.85 0.2 195);
+  --primary: oklch(0.85 0.20 195);
+  --ring: oklch(0.85 0.20 195);
 }
 
 /* =========================
-   THEME TOKENS
+   THEME TOKENS (TAILWIND USES THESE)
 ========================= */
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
@@ -91,19 +60,25 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
 
@@ -118,7 +93,7 @@
 }
 
 /* =========================
-   BASE
+   BASE STYLES
 ========================= */
 @layer base {
   * {
@@ -131,11 +106,11 @@
 }
 
 /* =========================
-   🔥 REAL TOUCH / CLICK LIGHT EFFECT
-   (THIS PART FIXES EVERYTHING)
+   🔥 FINAL TOUCH / CLICK LIGHT EFFECT
+   → THIS IS THE BUTTON LIGHT YOU WANT
 ========================= */
 
-/* Remove mobile tap highlight */
+/* Remove default mobile tap highlight */
 a,
 button {
   -webkit-tap-highlight-color: transparent;
@@ -143,7 +118,7 @@ button {
   transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 
-/* Light effect on tap / click */
+/* Cyan light on touch / click */
 a:focus-visible,
 button:focus-visible,
 a:active,
@@ -152,7 +127,7 @@ button:active {
   transform: scale(0.97);
 }
 
-/* Prevent default focus outline */
+/* Prevent ugly focus outline */
 a:focus,
 button:focus {
   outline: none;

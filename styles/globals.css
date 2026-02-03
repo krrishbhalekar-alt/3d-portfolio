@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =========================
-   LIGHT MODE (UNCHANGED)
+   ROOT (LIGHT MODE)
 ========================= */
 :root {
   --background: oklch(1 0 0);
@@ -39,7 +39,7 @@
 }
 
 /* =========================
-   DARK MODE – CYAN THEME
+   DARK MODE (CYAN THEME)
 ========================= */
 .dark {
   --background: oklch(0.145 0 0);
@@ -52,7 +52,7 @@
   --popover-foreground: oklch(0.985 0 0);
 
   /* 🔥 CYAN PRIMARY */
-  --primary: oklch(0.85 0.20 195);
+  --primary: oklch(0.85 0.2 195);
   --primary-foreground: oklch(0.145 0 0);
 
   --secondary: oklch(0.269 0 0);
@@ -70,18 +70,16 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
 
-  /* ✨ Glow ring */
-  --ring: oklch(0.85 0.20 195);
+  --ring: oklch(0.85 0.2 195);
 
-  /* Sidebar */
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.85 0.20 195);
+  --sidebar-primary: oklch(0.85 0.2 195);
   --sidebar-primary-foreground: oklch(0.145 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.85 0.20 195);
+  --sidebar-ring: oklch(0.85 0.2 195);
 }
 
 /* =========================
@@ -120,7 +118,7 @@
 }
 
 /* =========================
-   BASE STYLES
+   BASE
 ========================= */
 @layer base {
   * {
@@ -133,19 +131,29 @@
 }
 
 /* =========================
-   🔥 TOUCH / CLICK LIGHT EFFECT
-   (THIS IS WHAT YOU WANTED)
+   🔥 REAL TOUCH / CLICK LIGHT EFFECT
+   (THIS PART FIXES EVERYTHING)
 ========================= */
 
-/* Smooth interaction */
-button,
-a {
+/* Remove mobile tap highlight */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 
-/* Light effect ONLY when touched / clicked */
-button:active,
-a:active {
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+/* Light effect on tap / click */
+a:focus-visible,
+button:focus-visible,
+a:active,
+button:active {
+  box-shadow: 0 0 24px rgba(0, 255, 255, 1);
   transform: scale(0.97);
+}
+
+/* Prevent default focus outline */
+a:focus,
+button:focus {
+  outline: none;
 }

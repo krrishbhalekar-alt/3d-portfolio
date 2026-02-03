@@ -4,21 +4,19 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =========================
-   CYAN DARK THEME (FINAL)
+   ROOT THEME (CYAN DARK)
 ========================= */
 :root {
-  /* Background */
   --background: oklch(0.13 0.005 260);
   --foreground: oklch(0.95 0 0);
 
-  /* Cards / Glass */
   --card: oklch(0.16 0.005 260);
   --card-foreground: oklch(0.95 0 0);
 
   --popover: oklch(0.14 0.005 260);
   --popover-foreground: oklch(0.95 0 0);
 
-  /* 🔥 CYAN PRIMARY (TEXT + BUTTONS) */
+  /* 🔥 CYAN PRIMARY */
   --primary: oklch(0.85 0.20 195);
   --primary-foreground: oklch(0.13 0.005 260);
 
@@ -26,40 +24,22 @@
   --secondary-foreground: oklch(0.90 0 0);
 
   --muted: oklch(0.22 0.005 260);
-  --muted-foreground: oklch(0.60 0 0);
+  --muted-foreground: oklch(0.65 0 0);
 
   --accent: oklch(0.85 0.20 195);
   --accent-foreground: oklch(0.13 0.005 260);
 
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.95 0 0);
-
   --border: oklch(0.25 0.005 260);
   --input: oklch(0.20 0.005 260);
-
-  /* 🔥 CYAN GLOW */
   --ring: oklch(0.85 0.20 195);
 
   --radius: 0.75rem;
-
-  /* Sidebar */
-  --sidebar: oklch(0.12 0.005 260);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.85 0.20 195);
-  --sidebar-primary-foreground: oklch(0.13 0.005 260);
-  --sidebar-accent: oklch(0.20 0.005 260);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0.005 260);
-  --sidebar-ring: oklch(0.85 0.20 195);
 }
 
 /* =========================
-   TAILWIND THEME TOKENS
+   TAILWIND TOKENS
 ========================= */
 @theme inline {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'Geist Mono';
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -79,27 +59,100 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
 }
 
 /* =========================
-   BASE
+   BASE (TEXT FIX)
 ========================= */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+  /* 🔥 FORCE TEXT VISIBILITY */
+  h1, h2, h3, h4, h5, h6,
+  p, span, li, label, small {
+    color: var(--foreground);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+/* =========================
+   CYAN TEXT HELPERS
+========================= */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-accent {
+  color: var(--primary) !important;
+}
+
+/* Gradient text (ONLY when used intentionally) */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.95 0 0),
+    oklch(0.85 0.20 195)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================
+   BUTTON & LINK EFFECTS
+========================= */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.25s ease;
+}
+
+a:hover,
+button:hover {
+  color: var(--primary);
+}
+
+a:active,
+button:active {
+  box-shadow: 0 0 26px oklch(0.85 0.20 195 / 0.9);
+  transform: scale(0.96);
+}
+
+/* =========================
+   GLASS + GLOW
+========================= */
+.glass {
+  background: oklch(0.16 0.005 260 / 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid oklch(0.30 0.005 260 / 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 24px oklch(0.85 0.20 195 / 0.35);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 /* =========================
@@ -108,42 +161,16 @@ html {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: oklch(0.13 0.005 260);
+  background: var(--background);
 }
+
 ::-webkit-scrollbar-thumb {
   background: oklch(0.30 0.005 260);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.85 0.20 195);
-}
-
-/* =========================
-   GLASS EFFECT
-========================= */
-.glass {
-  background: oklch(0.16 0.005 260 / 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid oklch(0.30 0.005 260 / 0.3);
-}
-
-/* =========================
-   🔥 CYAN CLICK / TOUCH GLOW
-========================= */
-a,
-button {
-  -webkit-tap-highlight-color: transparent;
-  transition: all 0.2s ease;
-}
-
-a:hover,
-button:hover {
-  color: oklch(0.85 0.20 195);
-}
-
-a:active,
-button:active {
-  box-shadow: 0 0 30px oklch(0.85 0.20 195 / 0.9);
-  transform: scale(0.96);
+  background: var(--primary);
 }
